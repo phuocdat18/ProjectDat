@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <h3>KIểm tra độ tuổi</h3>
+        <tr>
+            <td>
+                <input type="number" id="num1" placeholder="Nhập số tuổi">
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <button onclick="checkold()">Kiểm tra</button>
+            </td>
+            <td>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function checkold() {
+            let a = document.getElementById("num1").value;
+            let tuoi = true;
+            if (a >= 15) {
+                if (a >= 19) {
+                    result = "Rất tiếc bạn quá già để học lớp 10"
+                } else result = "Bạn đủ tuổi vào học lớp 10";
+            } else if (a < 0) {
+                result = "Bạn còn chưa ra đời để học lớp mẫu giáo huống gì là lớp 10";
+            } else result = "Bạn không đủ tuổi học lớp 10";
+            document.getElementById("result").innerHTML= result;
+        }
+    </script>
+</body>
+</html>

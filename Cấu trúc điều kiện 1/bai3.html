@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="number" id="num1">
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <button onclick="checknumber()">Kiểm tra</button>
+            </td>
+            <td>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function checknumber() {
+            let a = document.getElementById("num1").value;
+            let c = true;
+            if (a > 0) {
+                result = a + " là số lớn hơn 0 ";
+            } else if( a == 0 )  {
+                result = a + " là số 0 " ;
+            } else result = a + " là số bé hơn 0 ";
+            document.getElementById("result").innerHTML= result;
+        }
+    </script>
+</body>
+</html>
