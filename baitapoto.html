@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <img id="abc" src="image/up.png" alt="">
+    <br>
+    <button onclick="right()">Phải</button>
+    <button onclick="down()">Xuống</button>
+    <button onclick="left()">Trái</button>
+    <button onclick="up()">Lên</button>
+    <script>
+        function right(){
+            document.getElementById("abc").src="image/right.png"
+        }  ;
+        function down(){
+            document.getElementById("abc").src="image/down.png"
+        };
+        function left(){
+            document.getElementById("abc").src="image/left.png"
+        };
+        function up(){
+            document.getElementById("abc").src="image/up.png"
+        };
+    </script>
+</body>
+</html>

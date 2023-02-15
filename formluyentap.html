@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuyentapForm</title>
+</head>
+<body>
+   <form method="post" action="https://www.facebook.com/messages/t/100005823732064">
+    <table>
+        <caption>
+            <h2>Tào lao Form</h2>
+        </caption>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="name">Name</label>
+                </td>
+                <td>
+                    <input type="text" id="name" placeholder="First Name">
+                </td>
+                <td>
+                    <input type="text" placeholder="Last Name">
+                </td> 
+                <td rowspan="2" colspan="2"> Viết cảm nghĩ về người iu của pạn </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                </td>
+                <td colspan="2">
+                    <input style="width: 98%;" type="email" id="email" placeholder="sample@example.com">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender">Gender</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender">Male
+                </td>
+                <td>
+                    <input type="radio" name="gender">Female
+                </td>
+                <td colspan="2">
+                    <input style="width: 100%;" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Phone">Phone</label>
+                </td>
+                <td colspan="2">
+                    <input style="width: 98%;" type="tel" required id="Phone">
+                </td>
+                <td colspan="2">
+                   Pạn có ngừi iu chưa.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="timezone">TimeZone</label>
+                </td>
+                <td>
+                    <input type="timezone" id="timezone">
+                </td>
+                <td>
+                   <input type="radio" name="like">Yes
+                </td>
+                <td>
+                    <input type="radio" name="like">No
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <label for="address">Cho tui cái địa chỉ</label>
+                </td>
+                <td colspan="2">
+                    <label for="share">Pạn có sẵn sàng cho tui 100tr không?</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input style="width: 98%;" type="text" id="address">
+                </td>
+                <td colspan="2">
+                    <input style="width: 100%;" type="text" id="share">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="Submit" value="Đăng kí"/>
+                </td>
+                <td>
+                    <input type="reset" name="reset" value="Hủy">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+   </form>
+</body>
+</html>

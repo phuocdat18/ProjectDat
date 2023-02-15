@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th for="thunhap">Thu nhập</th>
+            <th>Bậc</th>
+        </tr>
+        <tr>
+            
+            <td>
+                <input type="number" id="thunhap">
+            </td>
+            <td>
+                <td>
+                    <div id="result"></div>
+                </td>
+            </td>
+        </tr>
+        <tr>
+            <button  onclick="check()">Kiểm tra</button>
+        </tr>
+    </table>
+    <script>
+        function check() {
+            let thunhap = document.getElementById("thunhap").value;
+            let result = "" ;
+            
+            if (thunhap <= 5) {
+                if (thunhap <=10) {
+                    if (thunhap <=18) {
+                        if (thunhap <=32) {
+                            if (thunhap <=52) {
+                                if (thunhap <= 80) {
+                                    result ="6"
+                                } else result = "7"
+                            } else result = "4"
+                        } else result ="3"
+                    } else result="2"
+                } else result ="1"
+            }
+            
+        document.getElementById("result").innerHTML = result ;
+        }
+        
+    </script>
+
+</body>
+</html>
