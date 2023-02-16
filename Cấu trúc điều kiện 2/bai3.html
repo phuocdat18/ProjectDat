@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="number" id="num1" placeholder="Nhập chiều dài hình vuông">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="checknumber()">Kiểm tra</button>
+            </td>
+            <td>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function checknumber() {
+            let d = document.getElementById("num1").value;
+            let S = (d*d);
+            document.getElementById("result").innerHTML= "Hình vuông có diện tích là " + S +"m2";
+        }
+    </script>
+</body>
+</html>
