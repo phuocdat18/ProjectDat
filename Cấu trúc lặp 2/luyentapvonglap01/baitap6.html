@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tính tổng của 30 số chia hết cho 7 đầu tiên</title>
+</head>
+<body>
+	<h1>Tính tổng của 30 số chia hết cho 7 đầu tiên</h1>
+
+	<p id="result"></p>
+
+	<script>
+		var sum = 0;
+		var count = 0;
+
+		for (var i = 1; count < 30; i++) {
+			if (i % 7 == 0) {
+				sum += i;
+				count++;
+			}
+		}
+
+		document.getElementById("result").innerHTML = "Tổng của 30 số chia hết cho 7 đầu tiên là " + sum;
+	</script>
+</body>
+</html>
