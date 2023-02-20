@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Đếm số nguyên lớn hơn hoặc bằng 10</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [17, 12, 7, 15, 9, 11, 18, 3, 6, 10];
+        let count = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] >= 10) {
+                count++;
+            }
+        }
+        document.write(`Có ${count} số nguyên lớn hơn hoặc bằng 10 trong mảng.`);
+    </script>
+</body>
+
+</html>

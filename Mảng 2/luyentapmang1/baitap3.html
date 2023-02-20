@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tìm phần tử lớn nhất trong mảng</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [5, 12, 7, 15, 9, 11, 18, 3, 6, 10];
+        let max = numbers[0];
+        let index = 0;
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        const average = sum / numbers.length;
+
+        document.write(`Phần tử lớn nhất trong mảng là ${max} <br>`); 
+        document.write(`Trung bình tổng của các phần tử trong bảng là ${average}`)
+    </script>
+</body>
+
+</html>
