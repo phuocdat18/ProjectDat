@@ -48,6 +48,12 @@ for (let i = 0; i < matrix.length; i++) {
         sum1 += matrix[i][j];
     }
 }
+let sum11 = 0;
+for(let i = 0; i < matrix.length; i++) {
+    for (let j =0; j <=i; j++) {
+        sum11 += matrix[i][j];
+    }
+}
 console.log(`Tổng giá trị tam giác trên bên trái là ${sum1}`);
 //Bài 2: Tính tổng giá trị tam giác trên bên phải
 let sum2 = 0;
