@@ -36,7 +36,7 @@ for (let i = 0; i < matrix.length; i++) {
                     if (matrix[i][j] % 2 != 0) {
                         if (matrix[i][j] % 3 != 0) {
                             console.log(`Số ${matrix[i][j]} là số nguyên tố đầu tiên ở vị trí i = ${i} và j = ${j}`);
-                            break; 
+                            break 
                         }
                         else position2 += 1;
                     }
