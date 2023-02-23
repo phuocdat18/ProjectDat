@@ -95,28 +95,28 @@ displayEven(arr2);
 
 
 // bài 3 Hàm thiển thị các số nguyên tố của mảng;
-// let arr3 = [4, 5, 7, 1, 6];
-// function checkPrime(arr3) {
-//     for (let i = 0; i < arr3.length; i++) {
-//         if (arr3[i] <= 1) {
-//             console.log(`${arr3[i]} không phải là số nguyên tố`);
-//             prime = false;
-//         } else {
-//             let prime = true;
-//             for (let j = 2; j < arr3[i]; j++) {
-//                 if (arr3[i] % j == 0) {
-//                     prime = false;
-//                 }
-//             }
-//             if (prime == true) {
-//                 console.log(`${arr3[i]} là số nguyên tố`);
-//             } else {
-//                 console.log(`${arr3[i]} không phải là số nguyên tố`);
-//             }
-//         }
-//     }
-// }
-// checkPrime(arr3);
+let arr3 = [4, 5, 7, 1, 6];
+function checkPrime(arr3) {
+    for (let i = 0; i < arr3.length; i++) {
+        if (arr3[i] <= 1) {
+            console.log(`${arr3[i]} không phải là số nguyên tố`);
+            prime = false;
+        } else {
+            let prime = true;
+            for (let j = 2; j < arr3[i]; j++) {
+                if (arr3[i] % j == 0) {
+                    prime = false;
+                }
+            }
+            if (prime == true) {
+                console.log(`${arr3[i]} là số nguyên tố`);
+            } else {
+                console.log(`${arr3[i]} không phải là số nguyên tố`);
+            }
+        }
+    }
+}
+checkPrime(arr3);
 
 
 // Bài 4: Hàm tìm giá trị lớn nhất của mảng
@@ -130,6 +130,7 @@ function maxArr(arr4) {
     }
     return max;
 }
+
 let result4 = maxArr(arr4);
 console.log(` Bài 4: giá trị lớn nhất của mảng là ${result4}`);
 
@@ -205,12 +206,12 @@ function findNumber(arr9, number9) {
     for( let i = 0; i<number9.length; i++) {
         if(number9[i] == arr9) {
             position = i;
-            display += `${arr9} có vị trí thứ ${position} trong mảng\n`;
+            display += `${arr9} có vị trí thứ ${position} trong mảng n`;
             count += 1;
         }
     }
     if(count > 0) {
-        return displayEven;
+        return display;
     } else {
         return "-1";
     }
