@@ -17,3 +17,232 @@ document.write("The area is: " + area);
     </script>
 </body>
 </html>
+
+
+
+
+
+
+<script>
+
+
+
+
+    function Card(id, name, type, point) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.point = point;
+
+        this.getId = function () {
+            return this.id;
+        }
+    }
+
+
+    function Player(id, point) {
+        this.id = id;
+        this.point = point;
+        this.playerCards = [];
+    }
+    let MAX_CARD_ID = 44;
+    let MIN_CARD_ID = 1;
+    let idCards = [];
+    function Table() {
+        this.cards = [];
+        this.players = [];
+
+
+        this.findCardRandom = function () {
+            let checkRandomCard = true;
+            let idRandomCard;
+            do {
+                idRandomCard = Math.round(Math.random() * (MAX_CARD_ID - MIN_CARD_ID) + MIN_CARD_ID);
+                if (this.checkCardIdExists(idRandomCard) == false) {
+                    checkRandomCard = true;
+                } else {
+                    checkRandomCard = false;
+                }
+            } while (checkRandomCard);
+
+            let indexCard = this.cards.findIndex((card) => {
+                return card.getId() == idRandomCard;
+            });
+            let cardPlayer = this.cards.splice(indexCard, 1);
+            return cardPlayer;
+
+        }
+        this.checkCardIdExists = function (id) {
+            for (let i = 0; i < this.cards.length; i++) {
+                if (this.cards[i].getId() == id) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        this.initCards = function () {
+            let card1K = new Card(1, "A", "K", 1);
+            let card1R = new Card(2, "A", "R", 1);
+            let card1C = new Card(3, "A", "C", 1);
+            let card1B = new Card(4, "A", "B", 1);
+
+            let card2K = new Card(5, "2", "K", 2);
+            let card2R = new Card(6, "2", "R", 2);
+            let card2C = new Card(7, "2", "C", 2);
+            let card2B = new Card(8, "2", "B", 2);
+
+            let card3K = new Card(9, "3", "K", 3);
+            let card3R = new Card(10, "3", "R", 3);
+            let card3C = new Card(11, "3", "C", 3);
+            let card3B = new Card(12, "3", "B", 3);
+
+            let card4K = new Card(13, "4", "K", 4);
+            let card4R = new Card(14, "4", "R", 4);
+            let card4C = new Card(15, "4", "C", 4);
+            let card4B = new Card(16, "4", "B", 4);
+
+            let card5K = new Card(17, "5", "K", 5);
+            let card5R = new Card(18, "5", "R", 5);
+            let card5C = new Card(19, "5", "C", 5);
+            let card5B = new Card(20, "5", "B", 5);
+
+            let card6K = new Card(21, "6", "K", 6);
+            let card6R = new Card(22, "6", "R", 6);
+            let card6C = new Card(23, "6", "C", 6);
+            let card6B = new Card(24, "6", "B", 6);
+
+            let card7K = new Card(25, "7", "K", 7);
+            let card7R = new Card(26, "7", "R", 7);
+            let card7C = new Card(27, "7", "C", 7);
+            let card7B = new Card(28, "7", "B", 7);
+
+            let card8K = new Card(29, "8", "K", 8);
+            let card8R = new Card(30, "8", "R", 8);
+            let card8C = new Card(31, "8", "C", 8);
+            let card8B = new Card(32, "8", "B", 8);
+
+            let card9K = new Card(33, "9", "K", 9);
+            let card9R = new Card(34, "9", "R", 9);
+            let card9C = new Card(35, "9", "C", 9);
+            let card9B = new Card(36, "9", "B", 9);
+
+            let card10K = new Card(37, "10", "K", 10);
+            let card10R = new Card(38, "10", "R", 10);
+            let card10C = new Card(39, "10", "C", 10);
+            let card10B = new Card(40, "10", "B", 10);
+
+            let cardJK = new Card(41, "J", "K", 10);
+            let cardJR = new Card(42, "J", "R", 10);
+            let cardJC = new Card(43, "J", "C", 10);
+            let cardJB = new Card(44, "J", "B", 10);
+
+        
+
+
+
+            this.cards.push(card1K)
+            this.cards.push(card1R)
+            this.cards.push(card1C)
+            this.cards.push(card1B)
+
+            this.cards.push(card2K)
+            this.cards.push(card2R)
+            this.cards.push(card2C)
+            this.cards.push(card2B);
+
+            this.cards.push(card3K)
+            this.cards.push(card3R)
+            this.cards.push(card3C)
+            this.cards.push(card3B);
+
+            this.cards.push(card4K)
+            this.cards.push(card4R)
+            this.cards.push(card4C)
+            this.cards.push(card4B);
+
+            this.cards.push(card5K)
+            this.cards.push(card5R)
+            this.cards.push(card5C)
+            this.cards.push(card5B);
+
+            this.cards.push(card6K)
+            this.cards.push(card6R)
+            this.cards.push(card6C)
+            this.cards.push(card6B);
+
+            this.cards.push(card7K)
+            this.cards.push(card7R)
+            this.cards.push(card7C)
+            this.cards.push(card7B);
+
+            this.cards.push(card8K)
+            this.cards.push(card8R)
+            this.cards.push(card8C)
+            this.cards.push(card8B);
+
+            this.cards.push(card9K)
+            this.cards.push(card9R)
+            this.cards.push(card9C)
+            this.cards.push(card9B);
+
+            this.cards.push(card10K)
+            this.cards.push(card10R)
+            this.cards.push(card10C)
+            this.cards.push(card10B);
+
+
+            this.cards.push(cardJK)
+            this.cards.push(cardJR)
+            this.cards.push(cardJC)
+            this.cards.push(cardJB);
+
+          
+
+            let p1 = new Player(1, 0);
+            let p2 = new Player(2, 0);
+            let p3 = new Player(3, 0);
+
+            this.players.push(p1, p2, p3)
+
+        }
+
+
+        this.draw = function () {
+            for (let i = 0; i < this.players.length; i++) {
+                console.log(`Nguoi choi ${this.players[i].id}`);
+                for (let j = 0; j < this.players[i].playerCards.length; j++) {
+                    console.log(this.players[i].playerCards[j]);
+                    
+
+                    idCards.push(this.players[i].playerCards[j].id);
+                    console.log(idCards);
+                }
+            }
+        }
+
+
+        this.random = function () {
+            for (let i = 0; i < this.players.length; i++) {
+                
+                for (let j = 0; j < 3; j++) {
+                    let cardPlayer = this.findCardRandom();
+
+                    this.players[i].playerCards.push(cardPlayer);
+                }
+            }
+
+
+        }
+    }
+    let table = new Table();
+    table.initCards();  
+    table.random();
+    table.draw();
+    console.log(idCards);
+    
+
+
+
+
+
+</script>

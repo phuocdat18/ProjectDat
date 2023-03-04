@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bài Cào</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style type="text/css">
+        
+    </style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="Card.css">
+<!-- <audio autoplay>
+    <source src="nhacnen.mp3" type="audio/mpeg">
+</audio> -->
+<h1 style="font-size: 70px; justify-content: center; display: flex; text-shadow: 10px 10px 25px orangered;"
+    class="animate__animated animate__backInRight">Chào
+    mừng đến với thiên đường Cờ Bạc</h1>
+<header>
+
+</header>
+
+<body>
+    <audio id="winsound">
+        <source src="youwin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="losesound">
+        <source src="youlose.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="cardsound">
+        <source src="chiabai.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <div class="rectangle" ; class="animate__animated animate__backInDown"><img src="matbai.png"
+                style="width: 89.5px;" height="150px" alt=""></div>
+    </div>
+    <div class="container">
+        <div class="rectangle2">
+            <table id="myTable2">
+                <tr>
+                    <td class="animate__animated animate__fadeInTopRight">
+                        <img src="matbai.png" style="width: 86px;" height="146px" alt="" onclick="changeImage_4()"
+                            id="changeImage_4">
+                    </td>
+                    <td class="animate__animated animate__fadeInTopRight">
+                        <img src="matbai.png" style="width: 86px;" height="146px" alt="" onclick="changeImage_4()"
+                            id="changeImage_5">
+                    </td>
+                    <td class="animate__animated animate__fadeInTopRight">
+                        <img src="matbai.png" style="width: 86px;" height="146px" alt="" onclick="changeImage_4()"
+                            id="changeImage_6">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="rectangle1">
+            <table id="myTable1">
+                <tr>
+                    <!-- <td class="animate__animated animate__fadeInDown">
+                        <img src="matbai.png" style="width: 86px;" height="146px" alt="" onclick="changeImage_1()"
+                            id="changeImage1">
+                    </td>
+                    <td class="animate__animated animate__fadeInDown">
+                        <img src="matbai.png" style="width: 86px;" height="146px" alt="" onclick="changeImage_2()"
+                            id="changeImage2">
+                    </td>
+                    <td class="animate__animated animate__fadeInDown">
+                        <img src="matbai.png" style="width: 86px;" height="146px" alt="" onclick="changeImage_3()"
+                            id="changeImage3">
+                    </td> -->
+                    <td class="animate__animated animate__fadeInDown">
+                        <img class="card" src="matbai.png" style="width: 86px;" height="146px" alt=""
+                            onclick="changeImage_1()" id="changeImage1">
+                    </td>
+                    <td class="animate__animated animate__fadeInDown">
+                        <img class="card" src="matbai.png" style="width: 86px;" height="146px" alt=""
+                            onclick="changeImage_2()" id="changeImage2">
+                    </td>
+                    <td class="animate__animated animate__fadeInDown">
+                        <img class="card" src="matbai.png" style="width: 86px;" height="146px" alt=""
+                            onclick="changeImage_3()" id="changeImage3">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rectangle2">
+            <table id="myTable3">
+                <tr>
+                    <td class="animate__animated animate__fadeInTopLeft">
+                        <img src="matbai.png" style="width: 86px;" height="146px" alt="" onclick="changeImage_4()"
+                            id="changeImage_7">
+                    </td>
+                    <td class="animate__animated animate__fadeInTopLeft">
+                        <img src="matbai.png" style="width: 86px;" height="146px" alt="" onclick="changeImage_4()"
+                            id="changeImage_8">
+                    </td>
+                    <td class="animate__animated animate__fadeInTopLeft">
+                        <img src="matbai.png" style="width: 86px;" height="146px" alt="" onclick="changeImage_4()"
+                            id="changeImage_9">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="rectangle3">
+            <table>
+                <tr>
+                    <td>
+                        <p id="player2" style="margin: 10px; font-size: 25px; font-weight: 600;">Người chơi 2</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rectangle3">
+            <table>
+                <tr>
+                    <td>
+                        <p id="yourname" style="margin: 10px; font-size: 25px; font-weight: 600;"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rectangle3">
+            <table>
+                <tr>
+                    <td>
+                        <p id="player3" style="margin: 10px; font-size: 25px; font-weight: 600;">Người chơi 3</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <table>
+            <tr>
+                <th>
+                    <button class="button"
+                        style="width: 170px; height: 60px; background-color: orange; margin: 10px; font-size: 25px; font-weight: 600; "
+                        onclick="playNewGame()" id="myButton"><span>Chơi lại</span></button>
+                </th>
+                <th>
+                    <Button class="button"
+                        style="width: 170px; height: 60px; background-color: orange; margin: 10px; font-size: 25px; font-weight: 600;"
+                        onclick="check()" id="latbai"><span>Lật Bài</span></Button>
+
+                </th>
+                <th>
+                    <Button class="button"
+                        style="width: 170px; height: 60px; background-color: orange ; margin: 10px; font-size: 25px; font-weight: 600;"
+                        onclick="money()" id="naptien"><span>Nạp tiền</span></Button>
+
+                </th>
+                <th class="square">
+                    <p style="display: flex; justify-content: center; margin: 18px; ">Score: <span
+                            id="score">1000</span></p>
+                    <!-- <p>Kết quả: <span id="result"></span></p> -->
+                </th>
+                <th class="square1">
+                    <p
+                        style="display: flex; justify-content: center; margin: 18px; margin-top: 5px; margin-bottom: 0; ">
+                        Mức cược</p>
+                    <p class="square2"
+                        style="display: flex; justify-content: center; margin: 18px; margin-top: 0px; margin-bottom: 0; font-size: 50px; width: 115px; height: 30px; ">
+                        <input type="number" id="bet-amount" min="50" max="500" step="50">
+                    </p>
+                </th>
+                <th>
+                        <Button class="square3"
+                            style="width: 170px; height: 60px; background-color: chocolate; margin: 10px; font-size: 25px; font-weight: 600;"
+                            onclick="money()" id="naptien"><span>Cầm Đồ</span></Button>
+                </th>
+                <br>
+
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+<script src="Card.js">
+</script>
+
+
+</html>
