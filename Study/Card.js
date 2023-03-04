@@ -1,6 +1,6 @@
-// var changeImage1 = src = `matbai.png`;
-// var changeImage2 = src = `matbai.png`;
-// var changeImage3 = src = `matbai.png`;
+// var changeImage1 = src = `image/matbai.png`;
+// var changeImage2 = src = `image/matbai.png`;
+// var changeImage3 = src = `image/matbai.png`;
 var changeImage1 = src = null;
 var changeImage2 = src = null;
 var changeImage3 = src = null;
@@ -29,9 +29,9 @@ var changeImage3 = src = null;
 //     cells1.forEach(function (cell1) {
 
 //         cell1.classList.add("animate__animated", "animate__fadeInDown");
-//         cell1.querySelector("img:nth-of-type(1)").src = "matbai.png";
-//         cell1.querySelector("img:nth-of-type(2)").src = "matbai.png";
-//         cell1.querySelector("img:nth-of-type(3)").src = "matbai.png";
+//         cell1.querySelector("img:nth-of-type(1)").src = "image/matbai.png";
+//         cell1.querySelector("img:nth-of-type(2)").src = "image/matbai.png";
+//         cell1.querySelector("img:nth-of-type(3)").src = "image/matbai.png";
 //         document.getElementById("yourname").innerHTML = name + ": ";
 
 //     });
@@ -348,7 +348,7 @@ function changeImage_3() {
     document.getElementById("yourname").innerHTML = name + ": " + sumNumber1 + " Điểm";
     return sumNumber1
 }
-// var cards = ['matbai.png', 'matbai.png', 'matbai.png'];
+// var cards = ['image/matbai.png', 'image/matbai.png', 'image/matbai.png'];
 
 // // Lấy các phần tử trong HTML
 // var cards1 = document.getElementById('changeImage1');
@@ -553,22 +553,22 @@ function playNewGame() {
     // changeImage1 = null
     // changeImage2 = null
     // changeImage3 = null
-    document.getElementById("changeImage1").src = `matbai.png`;
-    document.getElementById("changeImage2").src = `matbai.png`;
-    document.getElementById("changeImage3").src = `matbai.png`;
-    document.getElementById("changeImage_4").src = `matbai.png`;
-    document.getElementById("changeImage_5").src = `matbai.png`;
-    document.getElementById("changeImage_6").src = `matbai.png`;
-    document.getElementById("changeImage_7").src = `matbai.png`;
-    document.getElementById("changeImage_8").src = `matbai.png`;
-    document.getElementById("changeImage_9").src = `matbai.png`;
+    document.getElementById("changeImage1").src = `image/matbai.png`;
+    document.getElementById("changeImage2").src = `image/matbai.png`;
+    document.getElementById("changeImage3").src = `image/matbai.png`;
+    document.getElementById("changeImage_4").src = `image/matbai.png`;
+    document.getElementById("changeImage_5").src = `image/matbai.png`;
+    document.getElementById("changeImage_6").src = `image/matbai.png`;
+    document.getElementById("changeImage_7").src = `image/matbai.png`;
+    document.getElementById("changeImage_8").src = `image/matbai.png`;
+    document.getElementById("changeImage_9").src = `image/matbai.png`;
     document.getElementById("yourname").innerHTML = name + ": ";
     document.getElementById("player2").innerHTML = "Người chơi 2: ";
     document.getElementById("player3").innerHTML = "Người chơi 3: ";
 
-    // var changeImage1 = src = `matbai.png`;
-    // var changeImage2 = src = `matbai.png`;
-    // var changeImage3 = src = `matbai.png`;
+    // var changeImage1 = src = `image/matbai.png`;
+    // var changeImage2 = src = `image/matbai.png`;
+    // var changeImage3 = src = `image/matbai.png`;
 
 
 }
