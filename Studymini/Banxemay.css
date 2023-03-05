@@ -1,0 +1,74 @@
+body {
+    background-image: url(image/hinhnen.png );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+
+header {
+    background-color: crimson;
+    color: #fff;
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
+    
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+section {
+    flex: 1;
+    margin: 10px;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+#form-ban-xe form {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-ban-xe form label {
+    margin-top: 10px;
+}
+
+#form-ban-xe form input,
+#form-ban-xe form textarea {
+    margin-bottom: 10px;
+}
+
+#xe-list {
+    /* list-style: none;
+    padding: 0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+#xe-list li {
+    border: 1px;
+    margin-bottom: 5px;
+    padding: 10px;
+    
+
+    width: calc(100% - 10px);
+
+}
+
+#xe-list li img {
+    height: 280px;
+    object-fit: cover;
+    width: 100%;
+
+}
