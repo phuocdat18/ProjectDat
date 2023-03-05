@@ -295,6 +295,37 @@ table.initCards();
 table.random();
 table.draw();
 
+
+
+const playNewGameButton = document.querySelector("#mybutton");
+
+function playNewGame() {
+    // Xóa dữ liệu bàn chơi cũ
+    const cardImages = document.querySelectorAll(".card");
+    cardImages.forEach((cardImage) => {
+        cardImage.src = "image/matbai.png";
+    });
+
+    table = null;
+
+    // Tạo bàn chơi mới
+    table = new Table();
+
+    // Khởi tạo các lá bài mới
+    table.initCards();
+
+    // Random vị trí các lá bài mới
+    table.random();
+
+    // Vẽ bàn chơi với dữ liệu mới
+    table.draw();
+}
+
+playNewGameButton.addEventListener("click", playNewGame);
+
+
+
+
 function changeImage_1() {
     const score = document.querySelector("#score");
     const betAmount = document.querySelector("#bet-amount");
@@ -408,12 +439,12 @@ function check() {
     }
 
 
-    document.getElementById("changeImage_4").src = `image/${idCards[0][0].id}.png`;
-    document.getElementById("changeImage_5").src = `image/${idCards[1][0].id}.png`;
-    document.getElementById("changeImage_6").src = `image/${idCards[2][0].id}.png`;
-    document.getElementById("changeImage_7").src = `image/${idCards[6][0].id}.png`;
-    document.getElementById("changeImage_8").src = `image/${idCards[7][0].id}.png`;
-    document.getElementById("changeImage_9").src = `image/${idCards[8][0].id}.png`;
+    document.getElementById("changeImage4").src = `image/${idCards[0][0].id}.png`;
+    document.getElementById("changeImage5").src = `image/${idCards[1][0].id}.png`;
+    document.getElementById("changeImage6").src = `image/${idCards[2][0].id}.png`;
+    document.getElementById("changeImage7").src = `image/${idCards[6][0].id}.png`;
+    document.getElementById("changeImage8").src = `image/${idCards[7][0].id}.png`;
+    document.getElementById("changeImage9").src = `image/${idCards[8][0].id}.png`;
     let sum2 = 0;
     let sum3 = 0;
     sum2 = idCards[0][0].point + idCards[1][0].point + idCards[2][0].point;
@@ -545,122 +576,137 @@ function check() {
 }
 
 
+// function playNewGame() {
+//     // Xóa các lá bài khỏi bàn chơi
+//     var cards = document.querySelectorAll('.card');
+//     for (var i = 0; i < cards.length; i++) {
+//       cards[i].parentNode.removeChild(cards[i]);
+//     }
 
-function playNewGame() {
+//     // Tạo lại các lá bài với hình ảnh matbai.png
+//     var cardContainer = document.querySelector('.card-container');
+//     for (var i = 0; i < 52; i++) {
+//       var card = document.createElement('div');
+//       card.className = 'card';
+//       card.style.backgroundImage = 'url("image/matbai.png")';
+//       cardContainer.appendChild(card);
+//     }
 
-
-
-    // changeImage1 = null
-    // changeImage2 = null
-    // changeImage3 = null
-    document.getElementById("changeImage1").src = `image/matbai.png`;
-    document.getElementById("changeImage2").src = `image/matbai.png`;
-    document.getElementById("changeImage3").src = `image/matbai.png`;
-    document.getElementById("changeImage_4").src = `image/matbai.png`;
-    document.getElementById("changeImage_5").src = `image/matbai.png`;
-    document.getElementById("changeImage_6").src = `image/matbai.png`;
-    document.getElementById("changeImage_7").src = `image/matbai.png`;
-    document.getElementById("changeImage_8").src = `image/matbai.png`;
-    document.getElementById("changeImage_9").src = `image/matbai.png`;
-    document.getElementById("yourname").innerHTML = name + ": ";
-    document.getElementById("player2").innerHTML = "Người chơi 2: ";
-    document.getElementById("player3").innerHTML = "Người chơi 3: ";
-
-    // var changeImage1 = src = `image/matbai.png`;
-    // var changeImage2 = src = `image/matbai.png`;
-    // var changeImage3 = src = `image/matbai.png`;
+//     // Khởi tạo lại đối tượng Table và gọi phương thức initCards() và random()
+//     table = new Table();
+//     table.initCards();
+//     table.random();
+//   }
 
 
-}
 
-// const depositButton = document.getElementById("naptien");
 
-// depositButton.addEventListener("click", function () {
-//     window.location.href = "https://example.com";
-// });
+
+// function playNewGame() {
+
+
+
+
+
+
+
+//     const cardImages = document.querySelectorAll(".card-image");
+//     cardImages.forEach((cardImage) => {
+//         cardImage.src = "image/matbai.png";
+//     });
+
+//     let table1 = new Table();
+//     table1.initCards();
+//     table1.random();
+//     table1.draw();
+
+// }
+
+// const playNewGameButton = document.querySelector("#playNewGame");
+// playNewGameButton.addEventListener("click", playNewGame);
+
+
+
+
+// let table = new Table(); // Khởi tạo biến toàn cục để lưu trữ đối tượng bảng
+
+// function playNewGame() {
+//     // Xóa dữ liệu của bảng hiện tại
+//     if (table) {
+//         table.cards = [];
+//         const tableElement = document.querySelector("#table");
+//         tableElement.innerHTML = "";
+//     }
+
+//     // Tạo đối tượng bảng mới
+//     table = new Table();
+//     table.initCards();
+
+//     // Thay đổi hình ảnh của các lá bài thành "matbai.png"
+//     const cardImages = document.querySelectorAll(".card-image");
+//     cardImages.forEach((cardImage) => {
+//         cardImage.src = "image/matbai.png";
+//     });
+
+//     // Bắt đầu lại trò chơi
+//     table.random();
+//     table.draw();
+// }
+
+// const playNewGameButton = document.querySelector("#playNewGame");
+// playNewGameButton.addEventListener("click", playNewGame);
+
+
+
+
+  
+  
 
 
 function money() {
-    // Swal.fire({
-    //     title: 'Sweet!',
-    //     text: 'Modal with a custom image.',
-    //     imageUrl: src = `image/naptien.png`,
-    //     imageWidth: 400,
-    //     imageHeight: 500,
-    //     imageAlt: 'Custom image',
-    // })
+    title: 'Select color',
 
-    // (async () => {
+        (async () => {
 
-    //     /* inputOptions can be an object or Promise */
-    //     const inputOptions = new Promise((resolve) => {
-    //         setTimeout(() => {
-    //             resolve({
-    //                 '#ff0000': 'Red',
-    //                 '#00ff00': 'Green',
-    //                 '#0000ff': 'Blue'
-    //             })
-    //         }, 1000)
-    //     })
-
-    //     const { value: color } = await Swal.fire({
-    //         title: 'Select color',
-    //         input: 'radio',
-    //         inputOptions: inputOptions,
-    //         inputValidator: (value) => {
-    //             if (!value) {
-    //                 return 'You need to choose something!'
-    //             }
-    //         }
-    //     })
-
-    //     if (color) {
-    //         Swal.fire({ html: `You selected: ${color}` })
-    //     }
-
-    // })()
-
-    (async () => {
-
-        /* inputOptions can be an object or Promise */
-        const inputOptions = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve({
-                    '#ff0000': '100.000đ',
-                    '#00ff00': '200.000đ',
-                    '#0000ff': '500.000đ'
-                })
-            }, 1000)
-        })
-
-        const { value: color } = await Swal.fire({
-            title: 'Select color',
-            input: 'radio',
-            inputOptions: inputOptions,
-            inputValidator: (value) => {
-                if (!value) {
-                    return 'Bạn cần chọn số tiền để nạp!'
-                }
-            }
-        })
-
-        if (color) {
-            let imageUrl;
-            if (color === '#ff0000') {
-                imageUrl = 'image/naptien.png';
-            } else if (color === '#00ff00') {
-                imageUrl = 'image/naptien.png';
-            } else if (color === '#0000ff') {
-                imageUrl = 'image/naptien.png';
-            }
-            Swal.fire({
-                title: 'Mời bạn quét mã QR để nạp tiền',
-                html: `<img src="${imageUrl}" style="max-width: 400px; height: 500px;" />`
+            /* inputOptions can be an object or Promise */
+            const inputOptions = new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve({
+                        '#ff0000': '100.000đ',
+                        '#00ff00': '200.000đ',
+                        '#0000ff': '500.000đ'
+                    })
+                }, 1000)
             })
 
-        }
+            const { value: color } = await Swal.fire({
+                title: 'Select color',
+                input: 'radio',
+                inputOptions: inputOptions,
+                inputValidator: (value) => {
+                    if (!value) {
+                        return 'Bạn cần chọn số tiền để nạp!'
+                    }
+                }
+            })
 
-    })()
+            if (color) {
+                let imageUrl;
+                if (color === '#ff0000') {
+                    imageUrl = 'image/naptien.png';
+                } else if (color === '#00ff00') {
+                    imageUrl = 'image/naptien.png';
+                } else if (color === '#0000ff') {
+                    imageUrl = 'image/naptien.png';
+                }
+                Swal.fire({
+                    title: 'Mời bạn quét mã QR để nạp tiền',
+                    html: `<img src="${imageUrl}" style="max-width: 400px; height: 500px;" />`
+                })
+
+            }
+
+        })()
 
 
 }

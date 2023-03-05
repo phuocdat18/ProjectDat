@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bán xe máy trực tuyến</title>
+    <style>
+    </style>
+
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="Banxemay.css">
+
+
+<body>
+    <header>
+        <h1 style="font-size: 70px;"  class="animate__animated animate__backInRight">Bán xe máy trực tuyến</h1>
+        <h2>
+            <button > <img src="" alt=""></button>
+            <button style="width: 90px; height: 30px; ">Giới thiệu</button>
+            <button style="width: 90px; height: 30px;">Sản phẩm</button>
+            <button style="width: 90px; height: 30px; ">Dịch vụ</button>
+            <button style="width: 90px; height: 30px; ">Tin tức</button>
+            <button style="width: 90px; height: 30px; ">Tuyển dụng</button>
+            <button style="width: 90px; height: 30px; ">Liên hệ</button>
+        </h2>
+    </header>
+    <main>
+        <section id="list-xe">
+            <h2 style="font-size: 40px; color: black;">Danh sách xe</h2>
+            <ul style="font-size: 23px; color:brown" id="xe-list">
+            </ul>
+        </section>
+        <section id="form-ban-xe">
+            <h2 style="font-size: 40px; color: black;">Bán xe của bạn</h2>
+            <form>
+                <label style="font-size: 30px; color: brown;" for="name">Tên xe:</label>
+                <input style="height: 25px; font-size: 20px;" type="text" id="name" name="name"><br>
+
+                <label style="font-size: 30px; color: brown" for="price">Giá tiền:</label>
+                <input style="height: 25px; font-size: 20px;" type="text" id="price" name="price"><br>
+
+                <label style="font-size: 30px; color: brown" for="description">Mô tả:</label>
+                <textarea style="height: 50px; font-size: 20px;" id="description" name="description"></textarea><br>
+
+                <label style="font-size: 30px; color: brown" for="image">Hình ảnh:</label>
+                <input type="file" id="image" name="image"><br>
+
+                <button style="font-size: 30px; color: black; background-color: lightcoral;" type="submit" id="submit-btn">Đăng bán</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="Banxemay.js">
+    </script>
+</body>
+
+</html>
